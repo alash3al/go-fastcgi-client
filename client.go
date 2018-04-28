@@ -579,12 +579,13 @@ func (c *FCGIClient) SetSendTimeout(t time.Duration) error {
 	return nil
 }
 
-// Stderr return the error buffer returned from the upstream.
+// Stderr returns the error buffer returned from the upstream.
 func (c *FCGIClient) Stderr() bytes.Buffer {
 	return c.stderr
 }
 
-// SetKeepAlive return the error buffer returned from the upstream.
+// SetKeepAlive wether to tell the upstream to keep the
+// connection or close it.
 func (c *FCGIClient) SetKeepAlive(ok bool) {
 	c.keepAlive = ok
 }
